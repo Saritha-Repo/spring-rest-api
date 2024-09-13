@@ -9,24 +9,16 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.spring.rest.api</groupId>
-	<artifactId>inventory-soa-project</artifactId>
+	<artifactId>inventory-management</artifactId>
 	<version>1.0.0</version>
-	<name>inventory-soa-project</name>
-	<description>Implement SOA pattern</description>
-	<packaging>pom</packaging>
-
-	<modules>
-		<module>inventory-service</module>
-		<module>order-service</module>
-		<module>payment-service</module>
-		<module>online-store-service</module>
-	</modules>
+	<name>inventory-management</name>
+	<description>Implement Inventory Management</description>
 
 	<properties>
 		<java.version>17</java.version>
 	</properties>
 	<dependencies>
-	<dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
@@ -35,6 +27,22 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<plugins>
